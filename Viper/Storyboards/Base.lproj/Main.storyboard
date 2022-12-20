@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LoginView" customModule="Viper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9wf-5l-Z7v">
+                                <rect key="frame" x="-22" y="398.66666666666669" width="437" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="NwN-CW-Wg0"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="rhA-hn-xd8"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Login"/>
+                                <connections>
+                                    <action selector="loginBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uop-O1-cFD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9wf-5l-Z7v" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Ou7-yz-mW9"/>
+                            <constraint firstItem="9wf-5l-Z7v" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="k5y-EB-ahN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loginBtn" destination="9wf-5l-Z7v" id="QLo-kC-4cc"/>
+                        <segue destination="Ydy-a2-8zz" kind="presentation" identifier="LoginToHome" modalPresentationStyle="fullScreen" id="XG8-d1-J3w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="48" y="-2"/>
+        </scene>
+        <!--Home View-->
+        <scene sceneID="WTd-mh-cs5">
+            <objects>
+                <viewController id="Ydy-a2-8zz" customClass="HomeView" customModule="Viper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DTY-a7-LG4">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0X-dR-5JW">
+                                <rect key="frame" x="-22" y="298.66666666666669" width="437" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="7z0-DP-p4n"/>
+                                    <constraint firstAttribute="height" constant="80" id="Vmh-OZ-z1o"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="logout"/>
+                                <connections>
+                                    <action selector="logOutBtnPressed:" destination="Ydy-a2-8zz" eventType="touchUpInside" id="Jqe-f9-bzb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UpU-NS-4R6">
+                                <rect key="frame" x="-75.666666666666686" y="498.66666666666674" width="544.33333333333337" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="Lcb-jm-jvo"/>
+                                    <constraint firstAttribute="height" constant="80" id="l1A-dd-VJv"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="showImage"/>
+                                <connections>
+                                    <action selector="showPhotoBtnPressed:" destination="Ydy-a2-8zz" eventType="touchUpInside" id="4k1-zE-FJG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Pyr-iK-zfT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="w0X-dR-5JW" firstAttribute="centerY" secondItem="Pyr-iK-zfT" secondAttribute="centerY" constant="-100" id="GLU-dJ-PW4"/>
+                            <constraint firstItem="UpU-NS-4R6" firstAttribute="centerY" secondItem="Pyr-iK-zfT" secondAttribute="centerY" constant="100" id="Ppv-1n-2S2"/>
+                            <constraint firstItem="UpU-NS-4R6" firstAttribute="centerX" secondItem="Pyr-iK-zfT" secondAttribute="centerX" id="Xxd-kH-vOP"/>
+                            <constraint firstItem="w0X-dR-5JW" firstAttribute="centerX" secondItem="Pyr-iK-zfT" secondAttribute="centerX" id="gEy-qg-6A2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="logOutBtn" destination="w0X-dR-5JW" id="pHP-su-nzL"/>
+                        <outlet property="showPhotoBtn" destination="UpU-NS-4R6" id="7C7-Bm-ffW"/>
+                        <segue destination="fLv-em-TUC" kind="presentation" identifier="HomeToPhoto" modalPresentationStyle="fullScreen" id="pXY-IN-Ugd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Oe-CV-aUq" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="789" y="-2"/>
+        </scene>
+        <!--Photo View-->
+        <scene sceneID="I0Y-AT-G6l">
+            <objects>
+                <viewController id="fLv-em-TUC" customClass="PhotoView" customModule="Viper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dpa-FW-FHx">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Uui-0A-MEk">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u2U-zB-V2p">
+                                <rect key="frame" x="20" y="79" width="73" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="FZp-CJ-FmE"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="73" id="dkO-Z3-Sot"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Done">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="21"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="backToHome:" destination="fLv-em-TUC" eventType="touchUpInside" id="53j-ox-kEK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bAc-CN-raX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="u2U-zB-V2p" firstAttribute="top" secondItem="bAc-CN-raX" secondAttribute="top" constant="20" id="1Qg-6E-ebu"/>
+                            <constraint firstItem="bAc-CN-raX" firstAttribute="bottom" secondItem="Uui-0A-MEk" secondAttribute="bottom" id="Fz6-FG-Hjr"/>
+                            <constraint firstItem="bAc-CN-raX" firstAttribute="trailing" secondItem="Uui-0A-MEk" secondAttribute="trailing" id="J1b-mP-K18"/>
+                            <constraint firstItem="u2U-zB-V2p" firstAttribute="leading" secondItem="bAc-CN-raX" secondAttribute="leading" constant="20" id="T5I-Cn-wRp"/>
+                            <constraint firstItem="Uui-0A-MEk" firstAttribute="top" secondItem="bAc-CN-raX" secondAttribute="top" id="U8w-hV-lEB"/>
+                            <constraint firstItem="Uui-0A-MEk" firstAttribute="leading" secondItem="bAc-CN-raX" secondAttribute="leading" id="l46-Rv-KSm"/>
+                            <constraint firstItem="Uui-0A-MEk" firstAttribute="leading" secondItem="u2U-zB-V2p" secondAttribute="trailing" constant="-93" id="oT3-YW-doq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="photoImage" destination="Uui-0A-MEk" id="Pcu-Nt-tkG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eGj-yM-Z8O" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1532" y="-2"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Login" width="413" height="236"/>
+        <image name="logout" width="413" height="206"/>
+        <image name="showImage" width="520" height="219"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
